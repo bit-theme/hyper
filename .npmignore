@@ -1,0 +1,3 @@
+.husky/**
+.commitlintrc.json
+.eslintrc.json
