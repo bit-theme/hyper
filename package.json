@@ -1,9 +1,28 @@
 {
   "name": "hyper-bit-theme",
   "version": "1.0.0",
+  "homepage": "https://github.com/bit-theme/hyper",
   "description": "Bit Theme for Hyper.",
-  "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bit-theme/hyper.git"
+  },
+  "author": {
+    "name": "Pedro Henrique",
+    "email": "pyter.dev@gmail.com",
+    "url": "https://www.pedrobezerra.com"
+  },
+  "main": "index.js",
+  "keywords": [
+    "hyper",
+    "hyper-bit-theme",
+    "hyper bit theme",
+    "bit",
+    "bit-theme",
+    "bit theme",
+    "theme"
+  ],
   "scripts": {
     "lint": "eslint --fix ."
   },
