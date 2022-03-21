@@ -1,30 +1,26 @@
-'use strict'
-
-const {
-  colors,
-  backgroundColor,
-  foregroundColor,
-  borderColor,
-  cursorColor,
-} = require('./colors')
+const { getColorPalette } = require('./src/colors')
 
 exports.decorateConfig = config => {
+  const { variant } = config.bitThemeConfig || {}
+
+  const palette = getColorPalette(variant)
+
   return Object.assign({}, config, {
-    colors,
-    backgroundColor,
-    foregroundColor,
-    borderColor,
-    cursorColor,
+    backgroundColor: palette.backgroundColor,
+    foregroundColor: palette.foregroundColor,
+    borderColor: palette.borderColor,
+    cursorColor: palette.cursorColor,
+    colors: palette.colors,
     termCSS: `
       ${config.termCSS || ''}
     `,
     css: `
       ${config.css || ''}
       .tabs_list .tab_tab.tab_active .tab_text  {
-        background: ${backgroundColor};
+        background: ${palette.backgroundColor};
       }
       .tab_active:before {
-        border-color: ${borderColor};
+        border-color: ${palette.borderColor};
       }
     `,
   })
